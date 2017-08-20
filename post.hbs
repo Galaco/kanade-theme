@@ -1,0 +1,66 @@
+{{!< default}}
+
+<main class="content" role="main">
+    {{#post}}
+    <article class="{{post_class}} {{#if feature_image}}has-feature-image{{/if}}">
+        {{#if feature_image }}
+        <section class="post-image">
+            <img src="{{feature_image}}"/>
+        </section>
+        {{/if}}
+        <section class="post-container">
+            <header class="post-header">
+                <div class="author">
+                    {{#if author.profile_image}}
+                    <div class="author-image">
+                        <img src="{{author.profile_image}}"/>"
+                    </div>
+                    {{/if}}
+                    <span class="author-name">
+                        {{author.name}}
+                    </span>
+                </div>
+                
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>    
+            </header>
+            <section class="post-content">
+                {{content}}
+            </section>
+            {{#if tags}}
+            <section class="tags">
+                 {{tags}}
+            </section>
+            {{/if}}
+            <footer class="post-meta">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <time class="post-datetime" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                        </div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <section class="post-comments">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">      
+                    var disqus_config = function () {
+                        this.page.url = "{{url absolute="true"}}";
+                        this.page.identifier = "ghost-{{comment_id}}";
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://' + d_id +'.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+        </section>
+    </article>
+    {{/post}}
+</main>

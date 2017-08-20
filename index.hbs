@@ -1,0 +1,61 @@
+{{!< default}}
+
+<main class="content" role="main">
+    {{#foreach posts}}
+    <article class="{{post_class}} {{#if feature_image}}has-feature-image{{/if}}">
+        {{#if feature_image }}
+        <section class="post-image">
+            <img src="{{feature_image}}"/>
+        </section>
+        {{/if}}
+        <section class="post-container">
+            <header class="post-header">
+                <div class="author">
+                    <a href="{{author.url}}">
+                        {{#if author.profile_image}}
+                        <div class="author-image">
+                            <img src="{{author.profile_image}}"/>"
+                        </div>
+                        {{/if}}
+                        <span class="author-name">
+                            {{author.name}}
+                        </span>
+                    </a>
+                </div>   
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>    
+            </header>
+            <section class="post-excerpt">
+                <p>{{excerpt}}&hellip;</p>
+            </section>
+            {{#if tags}}
+            <section class="tags">
+                 {{tags}}
+            </section>
+            {{/if}}
+            <footer class="post-meta">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <time class="post-datetime" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="{{url}}#disqus_thread">Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </article>
+    {{/foreach}}
+
+    {{pagination}}
+
+    <script type="text/javascript">
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'https://' + d_id + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+</main>
