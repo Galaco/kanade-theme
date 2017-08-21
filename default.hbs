@@ -46,7 +46,14 @@
                     <h4 class="blog-description">{{@blog.description}}</h4>
                 </div>
             </div>
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" id="navbar" role="navigation">
             {{navigation}}
+            </nav>
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas" id="toggleNav">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+            </button>
             <footer class="site-footer">
                 <div class="inner">
                     <section class="copyright"><a href="https://github.com/galaco/kanade-theme">Kanade</a> by <a href="https://www.galaco.me">Galaco</a> &copy; {{date format="YYYY"}}</section>
@@ -67,6 +74,6 @@
 
     {{! Scripts }}
     <script type='text/javascript' src='/assets/highlighter/prettify.js'></script>
-    <script type='text/javascript' src='/assets/js/shell.js'></script>
+    <script type='text/javascript' src='/assets/js/kanade.js'></script>
 </body>
 </html>
