@@ -2,7 +2,7 @@
     "name": "kanade",
     "description" : "A light and clean theme for ghost 1.0+.",
     "demo": "https://www.galaco.me",
-    "version": "0.0.1-b2",
+    "version": "0.0.1-b3",
     "engines": {
         "ghost": ">=1.0.0"
     },

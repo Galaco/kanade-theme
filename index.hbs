@@ -51,11 +51,13 @@
     {{pagination}}
 
     <script type="text/javascript">
-    (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'https://' + d_id + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+    if (d_id != false) {
+        (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + d_id + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    }
     </script>
 </main>
