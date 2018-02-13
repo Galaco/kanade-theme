@@ -135,6 +135,7 @@ article.post {
 
 article.post section.post-image,
 article.post section.post-image img {
+	width: 100%;
 	max-width: 100%;
 }
 
