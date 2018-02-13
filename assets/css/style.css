@@ -34,7 +34,8 @@ body {
 .main {
 	position: absolute;
 	margin-left: 280px;
-	padding: 96px 15% 0 5%;
+	padding-top: 96px;
+	max-width: 1080px;
 }
 
 
