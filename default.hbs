@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script>
-        var d_id  = false,
+        var d_id = false,
             g_id = false;
     </script>
 
@@ -41,8 +41,10 @@
                     <div class="sidebar-logo">
                         {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
                     </div>
+                </div>
+                <div class="row">
                     <h1 class="blog-title">{{@blog.title}}</h1>
-                </div> 
+                </div>
                 <div class="row">
                     <h4 class="blog-description">{{@blog.description}}</h4>
                 </div>

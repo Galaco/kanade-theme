@@ -10,18 +10,17 @@
         {{/if}}
         <section class="post-container">
             <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                 <div class="author">
                     {{#if author.profile_image}}
-                    <div class="author-image">
-                        <img src="{{author.profile_image}}"/>"
-                    </div>
+                        <div class="author-image">
+                            <img src="{{author.profile_image}}"/>"
+                        </div>
                     {{/if}}
                     <span class="author-name">
                         {{author.name}}
                     </span>
                 </div>
-                
-                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>    
             </header>
             <section class="post-content">
                 {{content}}
